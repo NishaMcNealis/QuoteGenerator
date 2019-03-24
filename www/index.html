@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="listOfQuotes.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    
+    <script>
+        //quoteList = import { quoteList } from './listOfQuotes.js'
+        function generate (){
+            var quoteIndex = Math.floor(Math.random() * quoteList.length);
+            var quote = quoteList[quoteIndex]
+            document.getElementById("Quote").innerHTML = quote
+            document.getElementById("Quote").style["display"] = "inline"
+        }
+    </script>
+    <style>
+        body {
+            background-image: url("images/omikuji-bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #hako {
+            margin-top: 15%;
+            margin-left : 0;
+            margin-right : 0;
+        }
+        
+        img {
+           width: 70%; 
+        }
+
+        #quoteLocation {
+            margin-top: 15%;
+            margin-left : 10%;
+            margin-right : 10%;
+        }
+        #bottombar {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="quoteLocation">
+      <h2 id = "Quote"> Click the button to generate a quote! </h2>
+    </div>
+    <div id="bottombar">
+        <img id="button" src="http://www.clker.com/cliparts/X/I/h/h/l/k/generate-button-md.png" onclick="generate()">
+    </div>
+</body>
+</html>
