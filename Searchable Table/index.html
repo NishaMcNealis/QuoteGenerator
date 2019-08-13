@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filter Table</title>
+    <link href="table.css" rel="stylesheet">
+  </head>
+  <body>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by tag">
+
+          <table id="myTable">
+              <tr class="header">
+                  <th style="width:60%;">Date</th>
+                  <th style="width:40%;">File Name</th>
+                  <th style="width:40%;">Tags</th>
+              </tr>
+              <tr>
+                  <td>1/21</td>
+                  <td>Sora</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>10/2</td>
+                  <td>Vista</td>
+                  <td>Intersection</td>
+              </tr>
+              <tr>
+                  <td>4/5</td>
+                  <td>Vista Edge</td>
+                  <td>Intersection, Dark</td>
+              </tr>
+              <tr>
+                  <td>3/31</td>
+                  <td>Other</td>
+                  <td>Crosswalk</td>
+              </tr>
+          </table>
+  </body>
+</html>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through table rows, hide rows that don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
