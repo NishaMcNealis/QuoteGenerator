@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Selectize.js Example</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="../dist/js/standalone/selectize.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+    <body>
+		<div id="wrapper">
+			<h1>Selectize.js Example</h1>
+
+			<div class="tags">
+					<label for="input-tags">Tags:</label>
+					<input type="text" id="input-tags" class="demo-default" value="Sora,Vista">
+				<script>
+				$('#input-tags').selectize({
+					persist: false,
+					createOnBlur: true,
+					create: true
+				});
+				</script>
+			</div>
+		</div>
+	</body>
+</html>

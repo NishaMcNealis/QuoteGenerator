@@ -1,2 +1,2 @@
-# [Searchable Table]
-Followed tutorial at https://www.w3schools.com/howto/howto_js_filter_table.asp to create a filter/search table with JavaScript, CSS and HTML. Added tag column and modified tutorial to search by tag rather than name. 
+# [Page with Tabs]
+Followed tutorial from https://www.tutorialrepublic.com/faq/how-to-keep-the-current-tab-active-on-page-reload-in-bootstrap.php to create simple HTML page with tabs. The page remains on the current tab when reloaded.
