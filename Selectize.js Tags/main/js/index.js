@@ -2,7 +2,7 @@ $(function() {
 	var $wrapper = $('#wrapper');
 
 
-	$('head').append('<link rel="stylesheet" href="../dist/css/selectize.legacy.css">');
+	$('head').append('<link rel="stylesheet" href="../main/css/selectize.legacy.css">');
 
 	// show current input values
 	$('select.selectized,input.selectized', $wrapper).each(function() {
